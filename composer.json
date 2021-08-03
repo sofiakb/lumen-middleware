@@ -32,8 +32,8 @@
         "illuminate/support": "^8.53",
         "phpunit/phpunit": "^9.5"
     },
-    "version": "v0.0.1-beta5",
-    "time": "2021-07-07",
+    "version": "v0.0.2",
+    "time": "2021-08-03",
     "require": {
         "sofiakb/php-utils": "^0.0.1-beta4"
     }
