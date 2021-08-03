@@ -1,0 +1,40 @@
+{
+    "name": "sofiakb/lumen-middleware",
+    "description": "A library lumen middleware",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sofiakb\\Lumen\\Middleware\\": "src/"
+        },
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Sofiakb",
+            "email": "contact.sofiakb@gmail.com",
+            "homepage": "https://sofianeakbly.fr",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "contact.sofiakb@gmail.com"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "illuminate/http": "^8.53",
+        "illuminate/support": "^8.53",
+        "phpunit/phpunit": "^9.5"
+    },
+    "version": "v0.0.1-beta5",
+    "time": "2021-07-07",
+    "require": {
+        "sofiakb/php-utils": "^0.0.1-beta4"
+    }
+}
