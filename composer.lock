@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ba217fd4b79e1628e2be2a0ead87d75",
+    "content-hash": "91c6acf68964fbf3e08a2480cb5301b7",
     "packages": [
+        {
+            "name": "sofiakb/lumen-logging",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sofiakb/lumen-logging.git",
+                "reference": "a5baae50dcf1ab589311bc1ea62b04a29fb341e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sofiakb/lumen-logging/zipball/a5baae50dcf1ab589311bc1ea62b04a29fb341e2",
+                "reference": "a5baae50dcf1ab589311bc1ea62b04a29fb341e2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "laravel/lumen-framework": "7.*|8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sofiakb\\Lumen\\Logging\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sofiakb",
+                    "email": "contact.sofiakb@gmail.com",
+                    "homepage": "https://sofianeakbly.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A lumen logging config file",
+            "homepage": "http://github.com/sofiakb/lumen-logging",
+            "support": {
+                "email": "contact.sofiakb@gmail.com",
+                "issues": "https://github.com/sofiakb/lumen-logging/issues",
+                "source": "https://github.com/sofiakb/lumen-logging/tree/v0.0.1"
+            },
+            "time": "2021-09-23T00:00:00+00:00"
+        },
         {
             "name": "sofiakb/php-utils",
             "version": "v0.0.1-beta4",
