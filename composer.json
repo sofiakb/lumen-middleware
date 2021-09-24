@@ -32,8 +32,8 @@
         "illuminate/support": "^8.53",
         "phpunit/phpunit": "^9.5"
     },
-    "version": "v0.0.3",
-    "time": "2021-09-23",
+    "version": "v0.0.4",
+    "time": "2021-09-24",
     "require": {
         "sofiakb/lumen-logging": "^0.0.1",
         "sofiakb/php-utils": "^0.0.2"
