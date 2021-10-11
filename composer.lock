@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b6c40f8677abe6ae77705cff2a815ba2",
+    "content-hash": "9b46613eeab1e847484bf73c474571ae",
     "packages": [
         {
             "name": "sofiakb/lumen-logging",
@@ -55,16 +55,16 @@
         },
         {
             "name": "sofiakb/php-utils",
-            "version": "v0.0.3",
+            "version": "v0.0.4-beta1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sofiakb/php-utils.git",
-                "reference": "084976fef27afef18df983d27df8dc2f35a860f1"
+                "reference": "1ae67f3158b0b10ee2ac98fe5808fead18d5f83f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sofiakb/php-utils/zipball/084976fef27afef18df983d27df8dc2f35a860f1",
-                "reference": "084976fef27afef18df983d27df8dc2f35a860f1",
+                "url": "https://api.github.com/repos/sofiakb/php-utils/zipball/1ae67f3158b0b10ee2ac98fe5808fead18d5f83f",
+                "reference": "1ae67f3158b0b10ee2ac98fe5808fead18d5f83f",
                 "shasum": ""
             },
             "require": {
@@ -98,7 +98,7 @@
             "support": {
                 "email": "contact.sofiakb@gmail.com",
                 "issues": "https://github.com/sofiakb/php-utils/issues",
-                "source": "https://github.com/sofiakb/php-utils/tree/v0.0.3"
+                "source": "https://github.com/sofiakb/php-utils/tree/v0.0.4-beta1"
             },
             "time": "2021-10-11T00:00:00+00:00"
         }
@@ -4509,7 +4509,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "sofiakb/php-utils": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
