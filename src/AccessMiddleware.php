@@ -38,10 +38,13 @@ class AccessMiddleware
     private function message(Request $request, $response)
     {
         $ip = \Illuminate\Support\Facades\Request::ip();
+        $url = \Illuminate\Support\Facades\Request::fullUrl();
         $browser = $request->header('user-agent') ?? $request->header('User-Agent');
 
         $message = "[{$response->status()}] $ip -- $browser" . PHP_EOL .
+            "\t * URL : {$url}" . PHP_EOL .
             "\t * Status code : {$response->status()}" . PHP_EOL .
+            "\t * Message : {$response->getContent()}" . PHP_EOL .
             "\t * Method : {$request->getMethod()}" . PHP_EOL .
             "\t * IP : {$ip}" . PHP_EOL .
             "\t * Browser : {$browser}" . PHP_EOL;
