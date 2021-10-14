@@ -32,7 +32,7 @@
         "illuminate/support": "^8.53",
         "phpunit/phpunit": "^9.5"
     },
-    "version": "v0.0.7-beta.2",
+    "version": "v0.0.7",
     "time": "2021-10-14",
     "require": {
         "sofiakb/lumen-logging": "^0.0.1",
