@@ -44,8 +44,7 @@ class AccessMiddleware
         $message = "[{$response->status()}] $ip -- $browser" . PHP_EOL .
             "\t * URL : {$url}" . PHP_EOL .
             "\t * Status code : {$response->status()}" . PHP_EOL .
-            "\t * Message : {$response->getContent()}" . PHP_EOL .
-            "\t * Method : {$request->getMethod()}" . PHP_EOL .
+            (str_contains($request->path(), '/api') ? "\t * Message : {$response->getContent()}" . PHP_EOL : '') .            "\t * Method : {$request->getMethod()}" . PHP_EOL .
             "\t * IP : {$ip}" . PHP_EOL .
             "\t * Browser : {$browser}" . PHP_EOL;
 
