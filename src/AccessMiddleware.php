@@ -25,12 +25,13 @@ class AccessMiddleware
         $response = $next($request);
         try {
             Log::channel('access')->info($this->message($request, $response));
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             Log::info($this->message($request, $response));
         }
         return $response;
     }
-
+    
     /**
      * @param Request $request
      * @return string
@@ -40,15 +41,22 @@ class AccessMiddleware
         $ip = \Illuminate\Support\Facades\Request::ip();
         $url = \Illuminate\Support\Facades\Request::fullUrl();
         $browser = $request->header('user-agent') ?? $request->header('User-Agent');
-
-        $message = "[{$response->status()}] $ip -- $browser" . PHP_EOL .
+        
+        
+        if ($response)
+            $message = "[{$response->status()}] $ip -- $browser" . PHP_EOL .
+                "\t * URL : {$url}" . PHP_EOL .
+                "\t * Status code : {$response->status()}" . PHP_EOL .
+                (str_contains($request->path(), '/api') ? "\t * Message : {$response->getContent()}" . PHP_EOL : '') .
+                "\t * Method : {$request->getMethod()}" . PHP_EOL .
+                "\t * IP : {$ip}" . PHP_EOL .
+                "\t * Browser : {$browser}" . PHP_EOL;
+        else $message = "$ip -- $browser" . PHP_EOL .
             "\t * URL : {$url}" . PHP_EOL .
-            "\t * Status code : {$response->status()}" . PHP_EOL .
-            (str_contains($request->path(), '/api') ? "\t * Message : {$response->getContent()}" . PHP_EOL : '') .
             "\t * Method : {$request->getMethod()}" . PHP_EOL .
             "\t * IP : {$ip}" . PHP_EOL .
             "\t * Browser : {$browser}" . PHP_EOL;
-
+        
         return $message;//. (($user = Auth::user()) ? " -- $user->email" : '');
     }
 }
