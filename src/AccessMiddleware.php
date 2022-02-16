@@ -41,9 +41,9 @@ class AccessMiddleware
         $ip = \Illuminate\Support\Facades\Request::ip();
         $url = \Illuminate\Support\Facades\Request::fullUrl();
         $browser = $request->header('user-agent') ?? $request->header('User-Agent');
-        
-        
-        if ($response)
+    
+    
+        if ($response && method_exists($response, 'status') && method_exists($response, 'getContent'))
             $message = "[{$response->status()}] $ip -- $browser" . PHP_EOL .
                 "\t * URL : {$url}" . PHP_EOL .
                 "\t * Status code : {$response->status()}" . PHP_EOL .

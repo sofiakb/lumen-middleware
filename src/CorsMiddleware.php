@@ -28,9 +28,10 @@ class CorsMiddleware
         }
 
         $response = $next($request);
-        foreach ($headers as $key => $value) {
-            $response->header($key, $value);
-        }
+        if ($response && method_exists($response, 'header'))
+            foreach ($headers as $key => $value) {
+                $response->header($key, $value);
+            }
 
         return $response;
     }
